@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<style>
-			html, body {
-    			width: 100%;
-    			height: 100%;
-    			margin: 0;
-			}
-			body {
-    			background-color: whitesmoke;
-    			font-family: Helvetica, sans-serif;
-			}
-			h1 {
-				position: fixed;
-				left: 50%;
-				top: 45%;
-				transform: translate(-50%,-50%);
-				max-width: 80%;
-				overflow-wrap: break-word;
-			}
-		</style>
-		<meta charset="utf-8">
-		<title>Display Text</title>
-	</head>
-	<body>
-		<h1 id="text">...</h1>
-		<script>
-			var input = decodeURI(window.location.hash.substr(1));
-			var output = "";
-			input.split("").forEach(a => {output += (String.fromCharCode(a.charCodeAt(0)-1))});
-			console.log(output);
-			document.getElementById("text").innerText = output;
-		</script>
-	</body>
+    <head>
+        <meta charset="utf-8">
+        <title>Display Text</title>
+        <style>
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+            }
+            body {
+                background-color: whitesmoke;
+                font-family: Helvetica, sans-serif;
+            }
+            h1 {
+                position: fixed;
+                left: 50%;
+                top: 45%;
+                transform: translate(-50%,-50%);
+                max-width: 80%;
+                overflow-wrap: break-word;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="text">...</h1>
+        <script>
+            var input = decodeURI(window.location.hash.substr(1));
+            var output = "";
+            input.split("").forEach(a => {output += (String.fromCharCode(a.charCodeAt(0)-1))});
+            console.log(output);
+            document.getElementById("text").innerText = output;
+        </script>
+    </body>
 </html>
