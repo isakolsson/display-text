@@ -11,7 +11,7 @@ To encrypt and encode a message you might use this javascript code:
 var input = "Text to encrypt";//change this
 var output = "";
 input.split("").forEach(a => {output += (String.fromCharCode(a.charCodeAt(0)+1))});
-console.log(encodeURI(output));
+console.log(encodeURIComponent(output));
 ```
 You can then add it to this URL: https://isakolsson.github.io/display-text/#YOUR-TEXT-HERE
 
